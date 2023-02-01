@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "7d6a6510-e6ba-4350-b168-56480be7def3",
+		"name": "API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25581072"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "jWT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/customers",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new_customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"new_user@gmail.com\",\r\n    \"username\" : \"new\",\r\n    \"name\": \"New User\",\r\n    \"newsletter_status\": false,\r\n    \"trips\":[]\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/users/new_customer",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"new_customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put_customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" :\"jan.novak@gmail.com\",\r\n    \"name\" : \"Jan Novak\",\r\n    \"newsletter_status\": \"false\",\r\n    \"username\" : \"johny\"\r\n}"
+				},
+				"url": {
+					"raw": "{{url}}/customer/johny",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customer",
+						"johny"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "detele_customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/customer/ivan1ľ3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"customer",
+						"ivan1ľ3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
